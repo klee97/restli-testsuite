@@ -1,0 +1,35 @@
+//This default Shipkit configuration file was created automatically and is intended to be checked-in.
+//Default configuration is sufficient for local testing and trying out Shipkit.
+//To leverage Shipkit fully, please fix the TODO items, refer to our Getting Started Guide for help:
+//
+//     https://github.com/mockito/shipkit/blob/master/docs/getting-started.md
+//
+shipkit {
+   gitHub.repository = "klee97/restli-testsuite"
+
+   gitHub.readOnlyAuthToken = "63a012d50f2bddab9e4ac6d65d639b2a8f304a03"
+
+   gitHub.writeAuthToken = System.getenv("GH_WRITE_TOKEN")
+}
+
+allprojects {
+   plugins.withId("org.shipkit.bintray") {
+
+       //Bintray configuration is handled by JFrog Bintray Gradle Plugin
+       //For reference see the official documentation: https://github.com/bintray/gradle-bintray-plugin
+       bintray {
+
+           key = System.getenv("BINTRAY_API_KEY")
+
+           pkg {
+               //TODO configure Bintray settings per your project (https://github.com/bintray/gradle-bintray-plugin)
+               repo = 'maven'
+               user = 'klee97'
+               // userOrg = 'shipkit-bootstrap'
+               name = 'restli-testsuite'
+               licenses = []
+               labels = ['rest.li', 'test suite', 'pegasus']
+           }
+       }
+   }
+}
