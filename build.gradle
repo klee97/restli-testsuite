@@ -12,9 +12,6 @@ buildscript {
 plugins {
     id "org.shipkit.java" version "2.0.31"
 }
-//task wrapper(type: Wrapper) {
-//  gradleVersion = '2.12'
-//}
 
 //Applying default build logic for an OS build:
 apply from: "defaultEnvironment.gradle"

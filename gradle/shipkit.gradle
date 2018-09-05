@@ -22,13 +22,12 @@ allprojects {
            key = System.getenv("BINTRAY_API_KEY")
 
            pkg {
-               //TODO configure Bintray settings per your project (https://github.com/bintray/gradle-bintray-plugin)
                repo = 'maven'
                user = 'klee97'
                // userOrg = 'shipkit-bootstrap'
                name = 'restli-testsuite'
-               licenses = []
-               labels = ['rest.li', 'test suite', 'pegasus']
+               licenses = [MIT]
+               labels = ['rest.li', 'test suite']
            }
        }
    }
