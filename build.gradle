@@ -16,8 +16,6 @@ plugins {
 //Applying default build logic for an OS build:
 apply from: "defaultEnvironment.gradle"
 
-group = "com.linkedin.restli-testsuite"
-
 ext.restliSpec = [
     'product' : [
         'pegasus' : [
@@ -44,6 +42,8 @@ ext.externalDependency = [
 allprojects {
   apply plugin: 'idea'
   apply plugin: 'eclipse'
+
+  group = "com.linkedin.restli-testsuite"
 }
 
 subprojects {
