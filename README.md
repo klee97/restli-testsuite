@@ -1,0 +1,2 @@
+This repo contains the build logic for the Rest.li test suite framework, without any of the Java code or tests. It uses [shipkit](https://github.com/mockito/shipkit/) and Travis-CI to automate releases to public repositories. It was created to explore the automated release process, which will help facilitate a smoother open source/internal integration process. This repo serves as an example of how to configure projects for open source/internal integration.
+
